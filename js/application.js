@@ -1,1 +1,1 @@
-window.Todos = Em.Application.create()
+window.Todos = Em.Application.create();
