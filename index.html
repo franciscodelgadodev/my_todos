@@ -15,22 +15,12 @@
 
         <section id="main">
           <ul id="todo-list">
-            <li class="completed">
-              <input type="checkbox" class="toggle">
-              <label>Learn Rails</label><button class="destroy"></button>
-            </li>
-            <li class="completed">
-              <input type="checkbox" class="toggle">
-              <label>Learn Ember.js</label><button class="destroy"></button>
-            </li>
-            <li>
-              <input type="checkbox" class="toggle">
-              <label>...</label><button class="destroy"></button>
-            </li>
-            <li>
-              <input type="checkbox" class="toggle">
-              <label>Profit!</label><button class="destroy"></button>
-            </li>
+            {{#each controller}}
+              <li>
+                <input type="checkbox" class="toggle">
+                <label>{{title}}</label><button class="destroy"></button>
+              </li>
+            {{/each}}
           </ul>
 
           <input type="checkbox" id="toggle-all">
@@ -74,5 +64,7 @@
     <script src="js/models/todo.js"></script>
 
     <script src="js/fixtures/todo.js"></script>
+
+    <script src="js/routes/todos.js"></script>
   </body>
 </html>
