@@ -20,5 +20,14 @@ Todos.TodosController = Ember.ArrayController.extend({
       title: this.get('newTitle'),
       isCompleted: false
     });
-  }
+  },
+
+	remaining: function() {
+		return this.filterProperty('isCompleted', false).get('length');
+	}.property('@each.isCompleted'),
+
+	inflection: function() {
+		var remaining = this.get('remaining');
+		return remaining === 1 ? 'item' : 'items';
+	}.property('remaining')
 });
