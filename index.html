@@ -42,10 +42,10 @@
           </span>
           <ul id="filters">
             <li>
-              <a href="all" class="selected">All</a>
+              {{#linkTo "todos.index" activeClass="selected"}}All{{/linkTo}}
             </li>
             <li>
-              <a href="active">Active</a>
+              {{#linkTo "todos.active" activeClass="selected"}}Active{{/linkTo}}
             </li>
             <li>
               <a href="completed">Completed</a>
@@ -77,6 +77,7 @@
 
     <script src="js/routes/todos.js"></script>
     <script src="js/routes/todos/index.js"></script>
+    <script src="js/routes/todos/active.js"></script>
 
     <script src="js/controllers/todos_controller.js"></script>
     <script src="js/controllers/todo_controller.js"></script>
