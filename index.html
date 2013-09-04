@@ -48,7 +48,7 @@
               {{#linkTo "todos.active" activeClass="selected"}}Active{{/linkTo}}
             </li>
             <li>
-              <a href="completed">Completed</a>
+              {{#linkTo "todos.completed" activeClass="selected"}}Completed{{/linkTo}}
             </li>
           </ul>
 
@@ -78,6 +78,7 @@
     <script src="js/routes/todos.js"></script>
     <script src="js/routes/todos/index.js"></script>
     <script src="js/routes/todos/active.js"></script>
+    <script src="js/routes/todos/completed.js"></script>
 
     <script src="js/controllers/todos_controller.js"></script>
     <script src="js/controllers/todo_controller.js"></script>
