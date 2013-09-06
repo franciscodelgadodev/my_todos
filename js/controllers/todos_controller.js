@@ -15,6 +15,10 @@ Todos.TodosController = Ember.ArrayController.extend({
     this.set('newTitle', '');
   },
 
+  allAreDone: function(key, value) {
+    return !!this.get('length') && this.everyProperty('isCompleted', true)
+  }.property('@each.isCompleted'),
+
   buildTodo: function() {
     return Todos.Todo.createRecord({
       title: this.get('newTitle'),
